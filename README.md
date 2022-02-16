@@ -18,3 +18,4 @@ Els paquets preparats per utilitzar estan disponibles al servidor Percona per al
 El repositori de Percona yum admet sistemes operatius populars basats en RPM, com ara CentOS, RHEL, Fedora i Amazon Linux AMI. 
 
 Instal·lem el dipòsit de Percona executant l'ordre següent amb sudo.
+![image](https://user-images.githubusercontent.com/61285257/154341235-64fa0714-a250-49ff-ab3b-c3ebd4afc826.png)
