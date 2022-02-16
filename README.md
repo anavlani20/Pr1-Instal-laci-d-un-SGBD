@@ -84,15 +84,64 @@ En principi ja esta tot en ordre, faltaria crear un usuari en el mysql, però ho
 
 ## RESPON O COMPROVA ELS SEGÜENTS APARTATS
 
-1. Un cop realitzada la instal·lació realitza una securització de la mateixa. Quin programa realitza aquesta tasca? Realitza una securització de la instal·lació indicant que la contrasenya de root sigui patata.
-2. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades de Percona Server en el CentOS 7.
+1. Un cop realitzada la instal·lació realitza una securització de la mateixa. Quin programa realitza aquesta tasca? Realitza una securització de la instal·lació indicant que la contrasenya de root sigui patata.  
+   >Si de primeres canviem la contrasenya, a patata, dins de la securització,en aquest cas, no ens deixarà.
+   Perquè no es compatible amb les polítiques de contrasenya que ve per defecte.
 
->Iniciem el servei Percona amb l'ordre següent: 
->**systemctl start mysql** 
-A continuació, comprovem l'estat del servei executant l'ordre següent: 
-**systemctl status mysql** 
-Aturem el servei executant l'ordre següent: 
-**systemctl stop mysql**
-Reiniciem el servei executant l'ordre següent: 
-**systemctl restart mysql**
+   >![image](https://user-images.githubusercontent.com/61285257/154345139-7ffac2e0-fed1-4ec8-a1c2-95798e0cbed5.png)
 
+   >Amb aquesta consulta sobre el mysql podrem veure els paràmetres d’aquestes polítiques, per després poder canviar-ho segons la contrasenya demanada.
+
+   >![image](https://user-images.githubusercontent.com/61285257/154345188-306d64f9-b277-4137-97c0-95a49996489e.png)
+
+   >Podem observar que “patata” de primeres no compliria amb aquesta política, per tant modificant el paràmetre de la mida de caràcters i el paràmetre de la política general a LOW. Fent això ens serviria.
+
+   >![image](https://user-images.githubusercontent.com/61285257/154345260-48d3c6b7-fce5-4a12-9835-e385bb08f00a.png)
+
+   >Després de canviar aquest paràmetres podem canviar la contrasenya de dues maneres.
+   >OPCIO 1:
+   >Amb la consulta sobre el mysql:
+
+   >![image](https://user-images.githubusercontent.com/61285257/154345442-f23f6e8b-1459-4c5e-bd12-73a367e1297a.png)
+
+   >La primera consulta seria canviar la contrasenya al root sobre qualsevol font remota, també podem posar una IP especifica o localhost, per seguretat.
+   >La segona consulta seria tornar a carregar els permisos.
+
+   >OPCIO 2:
+   >Directament canviar-ho en el mysql_secure_installation, en el meu cas em decantare per aquesta opció.
+
+   >![image](https://user-images.githubusercontent.com/61285257/154345523-b3e718ba-9473-40c3-8284-5c9bff5d29d3.png)
+
+   >![image](https://user-images.githubusercontent.com/61285257/154345542-b258140f-4438-4ffb-a421-af00e85ee5b2.png)
+
+   >Bàsicament podem observar que en aquestes últimes captures, després d'afegir la contrasenya "patata", la securització ens farà unes preguntes, les respostes pot dependre de la nostra preferència, menys la pregunta de "Disallow root login remotly?", en aquesta hem de posar un no, per després poder connectar amb un usuari root des de qualsevol entorn extern a la màquina.
+   Això seria tot.
+
+
+2. Quines són les instruccions per arrancar / verificar status / apagar servei de la base de dades de Percona Server en el CentOS 7.  
+    >Iniciem el servei Percona amb l'ordre següent:   
+    >**systemctl start mysql**   
+    >A continuació, comprovem l'estat del servei executant l'ordre següent:   
+    >**systemctl status mysql**   
+    >Aturem el servei executant l'ordre següent:   
+    >**systemctl stop mysql**  
+    >Reiniciem el servei executant l'ordre següent:   
+    >**systemctl restart mysql**  
+
+3.	A on es troba i quin nom rep el fitxer de configuració del SGBD Percona Server?  
+    >**/etc/my.cnf**
+
+    >![image](https://user-images.githubusercontent.com/61285257/154346719-b28d8bef-038d-420e-bf1f-5606d6105794.png)  
+
+4.	A on es troben físicament els fitxers de dades (per defecte). Com ho has sabut?  
+    >**/var/lib/mysql/**
+    >
+    >![image](https://user-images.githubusercontent.com/61285257/154346925-476afafb-3f85-497f-b57a-b99a0559e58d.png)
+    >
+    >A part de veure-ho en alguns moments d’instal·lar-lo, ho vaig veure en la documentació oficial de Percona.
+
+
+    
+
+
+ 
