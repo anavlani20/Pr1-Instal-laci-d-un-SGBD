@@ -138,7 +138,42 @@ En principi ja esta tot en ordre, faltaria crear un usuari en el mysql, però ho
     >
     >![image](https://user-images.githubusercontent.com/61285257/154346925-476afafb-3f85-497f-b57a-b99a0559e58d.png)
     >
-    >A part de veure-ho en alguns moments d’instal·lar-lo, ho vaig veure en la documentació oficial de Percona.
+    >A part de veure-ho en alguns moments d’instal·lar-lo, ho vaig veure en la documentació oficial de Percona.  
+
+5.	Crea un usuari anomenat asix en el sistema operatiu i en SGBD de tal manera que aquest usuari del sistema operatiu no hagi d'introduir l'usuari i password cada vegada que cridem al client mysql?  
+     i.	https://dev.mysql.com/doc/refman/8.0/en/password-security-user.html
+     ii.	Usuari SO-→ asix / patata
+
+     >![image](https://user-images.githubusercontent.com/61285257/154349155-96b38163-566d-4049-8a5d-99a2349af293.png)
+
+     >Crearem l’usuari, le definim la contrasenya i l’afegim al grup de superusuaris(root).
+
+     >iii.	Usuari MySQL → asix / patata
+
+     >![image](https://user-images.githubusercontent.com/61285257/154349392-0513ab7f-14f0-4a79-8217-fcf089fd7bcb.png)
+
+     >Crearem l’usuari i l’otorgarem tots els permisos en qualsevol base de    dades i dispositiu remot.
+
+     >**Configuració**  
+     >*/etc/my.cnf*  
+
+     >![image](https://user-images.githubusercontent.com/61285257/154349502-9c2bd0cd-524e-44a9-b2fe-f8eec5ee0058.png)
+
+     >Afegirem les seguent línies (client y password).  
+     >Tambè es podria entrar amb l’usuari sense indicar ni l’usuari, per en aquest cas l’exercici nomes ens demana la contrasenya.  
+
+     >![image](https://user-images.githubusercontent.com/61285257/154349558-d7328658-41cd-42da-905a-6669d7b292b8.png)
+
+     >Aquest punt es opcional, però en un cas real er mantenir la contrasenya segura, el fitxer no ha de ser accessible per a ningú més que per l’usuari. Per assegurar-vos,       establiu el mode d'accés a fitxers en 400 o 600.  
+
+     >![image](https://user-images.githubusercontent.com/61285257/154349816-c30707a3-6e27-4004-a376-1c2a276b6d76.png)
+
+     >Aquest seria el resultat, no hem indicat password i ha entrat a mysql.
+
+     >![image](https://user-images.githubusercontent.com/61285257/154349861-7ec8e7f5-42bd-4ba1-ba94-ac74f693b290.png)
+
+
+
 
 
     
