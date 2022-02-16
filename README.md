@@ -170,7 +170,11 @@ En principi ja esta tot en ordre, faltaria crear un usuari en el mysql, però ho
 
      >Aquest seria el resultat, no hem indicat password i ha entrat a mysql.
 
-     >![image](https://user-images.githubusercontent.com/61285257/154349861-7ec8e7f5-42bd-4ba1-ba94-ac74f693b290.png)
+     >![image](https://user-images.githubusercontent.com/61285257/154349861-7ec8e7f5-42bd-4ba1-ba94-ac74f693b290.png)  
+
+6.	El servei de MySQL (mysqld) escolta al port 3306. Quina modificació/passos caldrien fer per canviar aquest port a 33306 per exemple?
+7.	Important: No realitzis els canvis. Només indica els passos que faries.
+
 
 
 
