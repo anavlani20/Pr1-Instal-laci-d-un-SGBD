@@ -58,3 +58,4 @@ Cal afegir el port de MySQL a aquest firewall perquè hi puguem accedir des de l
 ![image](https://user-images.githubusercontent.com/61285257/154446754-d92cb054-3632-44f9-9057-21e1a2ea8afe.png)
 
 Instal·lació i configuració del MySQL finalitzada.
+
