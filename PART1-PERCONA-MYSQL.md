@@ -1,5 +1,7 @@
 # Part I - INSTAL·LACIÓ SGBD MySQL Percona (màx. 6 punts)
 
+![image](https://user-images.githubusercontent.com/61285257/154440402-8b1e2c3d-6c5a-4c6f-a041-f9981b6dcbe8.png)
+
 Primer de tot com sempre, hem d’asegurar que la nostra maquina estigui actualitzada, farem un yum -y Update.
 Conf – xarxa:
 
@@ -174,6 +176,52 @@ En principi ja esta tot en ordre, faltaria crear un usuari en el mysql, però ho
 
 6.	El servei de MySQL (mysqld) escolta al port 3306. Quina modificació/passos caldrien fer per canviar aquest port a 33306 per exemple?
 7.	Important: No realitzis els canvis. Només indica els passos que faries.
+
+     >Editarem el fitxer de configuració del MySQL = **/etc/my.cnf**  
+
+     >![image](https://user-images.githubusercontent.com/61285257/154439376-c27b20df-dc5a-4b83-940e-24219801b57d.png)
+
+     >Afegiriem el port a la configuració a l’apartat de mysqld.  
+     >Un cop fet això, guardarem els canvis del fitxer i reiniciarem el servei de mysql (systemctl).  
+
+     >![image](https://user-images.githubusercontent.com/61285257/154439522-21480473-0154-44ac-9ad5-30d6644757a5.png)
+
+     >Amb aquesta comanda comprovaríem si el servei mysql esta escoltant per el port desitjat.   
+     >Ens sortiria una cosa tal com així:  
+
+     >![image](https://user-images.githubusercontent.com/61285257/154439584-06983285-9a9c-4d2c-8a41-5586e79a0ed2.png)
+
+     >En lloc del 3306 ens sortiria el port modificat.
+
+     >En aquest cas utilitzarem com SGBD el MySQL Workbench 8.0 CE.  
+     >En aquesta prova entrarem amb l’usuari asix.  
+     >El tallafocs hauria de estar obert per el port 3306(en la documentació de l’instal·lació, al final, podem trobar com fer-ho).  
+
+     >![image](https://user-images.githubusercontent.com/61285257/154439685-41702f39-ab14-4b9d-bc81-a93656ae4fd0.png)
+
+     >Accedirem per aquesta ip. Es un adaptador-pont de la maquina virtual.  
+
+     >![image](https://user-images.githubusercontent.com/61285257/154439753-639cc879-e319-4a94-ab51-ea2c0111f166.png)
+     >![image](https://user-images.githubusercontent.com/61285257/154439786-558542cc-85e9-4416-9c8b-bfba6681ff51.png)
+
+     >![image](https://user-images.githubusercontent.com/61285257/154439807-9ec53a3e-3406-4ed7-bcb6-7b54bd7407f2.png)
+
+     >Connexió successfull.
+
+     >![image](https://user-images.githubusercontent.com/61285257/154443538-c34f3683-ba3f-450f-b3f8-5451e5b5bc58.png)
+
+     >Podem executar qualsevol consulta, en aquest  cas com un exemple, per saber la versió. 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
