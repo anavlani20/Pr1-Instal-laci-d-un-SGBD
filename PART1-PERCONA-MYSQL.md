@@ -8,6 +8,8 @@ Conf – xarxa:
 ![Imagen1](https://user-images.githubusercontent.com/61285257/154336835-f408799e-fc19-4b72-96b2-7809e019dcd2.png)
 
 ## INSTAL·LACIÓ PERCONA MYSQL
+*Percona és una empresa líder a brindar el millor suport de classe empresarial, consultoria, serveis administrats, capacitació i programari per a MySQL i altres bases de dades.*
+
 Els paquets preparats per utilitzar estan disponibles al servidor Percona per als repositoris de programari MySQL. 
 El repositori de Percona yum admet sistemes operatius populars basats en RPM, com ara CentOS, RHEL, Fedora i Amazon Linux AMI. 
 
