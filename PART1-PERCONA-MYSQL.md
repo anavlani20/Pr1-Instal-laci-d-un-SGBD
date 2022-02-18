@@ -194,6 +194,7 @@ En principi ja esta tot en ordre, faltaria crear un usuari en el mysql, però ho
      >![image](https://user-images.githubusercontent.com/61285257/154439584-06983285-9a9c-4d2c-8a41-5586e79a0ed2.png)
 
      >En lloc del 3306 ens sortiria el port modificat.
+ 8.	Ensenya al professor que us podeu connectar al SGBD.
 
      >En aquest cas utilitzarem com SGBD el MySQL Workbench 8.0 CE.  
      >En aquesta prova entrarem amb l’usuari asix.  
